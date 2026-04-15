@@ -8,23 +8,24 @@ const projects = [
     title: "Curexa Labs",
     category: "AI Drug Discovery System",
     tools: "Deep Learning, Python, Pharmaceutical Research, Predictive Modeling",
-    image: "/images/drug_discovery.png", 
-    link: "#", // Add your GitHub or Project link here
+    // Use the exact filename you provided
+    image: "/images/Screenshot 2026-04-15 220729.png", 
+    link: "#", 
     buttonText: "View Project"
   },
   {
     title: "Gemini TruthLens",
     category: "Research Publication",
     tools: "Vertex AI, Cloud Run, Multimodal Deepfake Detection, Research Paper",
-    image: "/images/truthlens.png",
-    link: "https://medium.com/@anirudhkoppuravuri1", // Your Medium Research link
+    image: "", // Keep blank or use the same image if preferred
+    link: "https://medium.com/@anirudhkoppuravuri1", 
     buttonText: "Read Research Paper"
   },
   {
     title: "ConnectX",
     category: "Networking Intelligence Platform",
     tools: "LinkedIn Data Integration, Behavioral Pattern Matching, Digital Passport",
-    image: "/images/connectx.png",
+    image: "", 
     link: "#",
     buttonText: "View Project"
   },
@@ -32,7 +33,7 @@ const projects = [
     title: "Optima X",
     category: "Financial Decision Intelligence",
     tools: "Proprietary Resonance Algorithms, Stock Market Optimization, No-Code",
-    image: "/images/optimax.png",
+    image: "", 
     link: "#",
     buttonText: "View Project"
   },
