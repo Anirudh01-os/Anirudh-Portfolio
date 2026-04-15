@@ -16,18 +16,14 @@ const setCharacter = (
   const loadCharacter = () => {
     return new Promise<GLTF | null>(async (resolve, reject) => {
       try {
-        const encryptedBlob = await decryptFile(
-          "/models/character.enc?v=2",
-          "MyCharacter12"
-        );
-        const blobUrl = URL.createObjectURL(new Blob([encryptedBlob]));
 
-        let character: THREE.Object3D;
-        loader.load(
-          blobUrl,
-          async (gltf) => {
-            character = gltf.scene;
-            await renderer.compileAsync(character, camera, scene);
+const modelUrl = "/models/nexbot_robot_character_concept (1).gltf";
+
+let character: THREE.Object3D;
+loader.load(
+  modelUrl, 
+  async (gltf) => {
+    // Keep the rest of the code below this line the same!
             character.traverse((child: any) => {
               if (child.isMesh) {
                 const mesh = child as THREE.Mesh;
