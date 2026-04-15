@@ -5,32 +5,36 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "CallHQ",
-    category: "Voice AI Calling Platform",
-    tools: "Voice AI, Calling Automation, CRM Integrations",
-    image: "/images/callhq.png",
-    link: "https://callhq.ai",
+    title: "Curexa Labs",
+    category: "AI Drug Discovery System",
+    tools: "Deep Learning, Python, Pharmaceutical Research, Predictive Modeling",
+    image: "/images/drug_discovery.png", 
+    link: "#", // Add your GitHub or Project link here
+    buttonText: "View Project"
   },
   {
-    title: "Whatsapp Automation",
-    category: "WABA Application",
-    tools: "WhatsApp Business API, Workflow Automation, Notifications",
-    image: "/images/whatsapp.png",
-    link: "https://whatsapp.callhq.ai",
+    title: "Gemini TruthLens",
+    category: "Research Publication",
+    tools: "Vertex AI, Cloud Run, Multimodal Deepfake Detection, Research Paper",
+    image: "/images/truthlens.png",
+    link: "https://medium.com/@anirudhkoppuravuri1", // Your Medium Research link
+    buttonText: "Read Research Paper"
   },
   {
-    title: "Broki",
-    category: "Real Estate Platform for FnB Industry",
-    tools: "Property Discovery, Lead Management, Marketplace Workflows",
-    image: "/images/broki.png",
-    link: "https://broki.in",
+    title: "ConnectX",
+    category: "Networking Intelligence Platform",
+    tools: "LinkedIn Data Integration, Behavioral Pattern Matching, Digital Passport",
+    image: "/images/connectx.png",
+    link: "#",
+    buttonText: "View Project"
   },
   {
-    title: "Orrdr.com",
-    category: "Ecommerce Platform and Mobile App",
-    tools: "Ecommerce, Mobile Experience, Order Management",
-    image: "/images/orrdr.png",
-    link: "https://orrdr.com",
+    title: "Optima X",
+    category: "Financial Decision Intelligence",
+    tools: "Proprietary Resonance Algorithms, Stock Market Optimization, No-Code",
+    image: "/images/optimax.png",
+    link: "#",
+    buttonText: "View Project"
   },
 ];
 
@@ -68,7 +72,6 @@ const Work = () => {
         </h2>
 
         <div className="carousel-wrapper">
-          {/* Navigation Arrows */}
           <button
             className="carousel-arrow carousel-arrow-left"
             onClick={goToPrev}
@@ -86,7 +89,6 @@ const Work = () => {
             <MdArrowForward />
           </button>
 
-          {/* Slides */}
           <div className="carousel-track-container">
             <div
               className="carousel-track"
@@ -110,6 +112,24 @@ const Work = () => {
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
                         </div>
+                        {/* Action Button */}
+                        <a 
+                          href={project.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="project-link-btn"
+                          style={{
+                            marginTop: '20px',
+                            display: 'inline-block',
+                            padding: '10px 20px',
+                            border: '1px solid white',
+                            color: 'white',
+                            textDecoration: 'none',
+                            fontSize: '0.9rem'
+                          }}
+                        >
+                          {project.buttonText}
+                        </a>
                       </div>
                     </div>
                     <div className="carousel-image-wrapper">
@@ -125,7 +145,6 @@ const Work = () => {
             </div>
           </div>
 
-          {/* Dot Indicators */}
           <div className="carousel-dots">
             {projects.map((_, index) => (
               <button
