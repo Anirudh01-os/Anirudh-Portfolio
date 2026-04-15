@@ -17,6 +17,9 @@ const setCharacter = (
     return new Promise<GLTF | null>(async (resolve, reject) => {
       try {
 
+// DELETE the old "const encryptedBlob" and "const blobUrl" lines.
+// REPLACE them with this:
+
 const modelUrl = "/models/nexbot_robot_character_concept (1).gltf";
 
 let character: THREE.Object3D;
@@ -49,8 +52,8 @@ loader.load(
             resolve(gltf);
             setCharTimeline(character, camera);
             setAllTimeline();
-            character!.getObjectByName("footR")!.position.y = 3.36;
-            character!.getObjectByName("footL")!.position.y = 3.36;
+           // character!.getObjectByName("footR")!.position.y = 3.36;
+           // character!.getObjectByName("footL")!.position.y = 3.36;
 
             // Monitor scale is handled by GsapScroll.ts animations
 
